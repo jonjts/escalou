@@ -1,8 +1,8 @@
-import { render } from "@testing-library/react";
 import Page from "../page";
+import { renderWithIntl } from "./helper";
 
 describe("Page", () => {
   it("should render the page", () => {
-    expect(() => render(<Page />)).not.toThrow();
+    expect(() => renderWithIntl(<Page />)).not.toThrow();
   });
 });
