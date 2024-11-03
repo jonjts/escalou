@@ -1,3 +1,13 @@
 {
-    "brand": "Escalou - Sorteio de Grupos"
+    "brand": "Escalou - Sorteio de Grupos",
+    "PotsPanel":{
+        "female":{
+            "title": "Potes"
+        }
+    },
+    "Pot":{
+        "female":{
+            "textAreaPlaceholder": "Adicione as jogadores separadas por vírgula"
+        }
+    }
 }

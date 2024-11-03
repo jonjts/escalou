@@ -1,8 +1,14 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { Container } from "@chakra-ui/react";
 
-export default function Home() {
-  const t = useTranslations();
+import Home from "./Home";
 
-  return <div>{t("brand")}</div>;
-}
+const EntryPoint = () => {
+  return (
+    <Container className="mt-8 md:p-14 lg:p-20 xl:p-20" fluid>
+      <Home />
+    </Container>
+  );
+};
+
+export default EntryPoint;

@@ -4,7 +4,7 @@ import { Locale } from "@/models/Locale";
 
 export const routing = defineRouting({
   locales: [Locale.EN, Locale.PT_BR],
-  defaultLocale: Locale.EN,
+  defaultLocale: Locale.PT_BR,
 });
 
 export const { Link, redirect, usePathname, useRouter } =

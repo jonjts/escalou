@@ -1,3 +1,13 @@
 {
-    "brand": "Escalou - Group Draw"
+    "brand": "Escalou - Group Draw",
+    "PotsPanel":{
+        "female":{
+            "title": "Pots"
+        }
+    },
+    "Pot":{
+        "female":{
+            "textAreaPlaceholder": "Add players separated by comma"
+        }
+    }
 }
