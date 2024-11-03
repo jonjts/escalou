@@ -7,11 +7,16 @@ interface UseMembersManagerParams {
 
 const TOKEN_SEPARATOR = ",";
 
+const formatInitialMembers = (initialMembers: string[]) =>
+  initialMembers.map((member, index) => (index !== 0 ? ` ${member}` : member));
+
 export const useMembersManager = ({
   onMembersChange,
   initialMembers,
 }: UseMembersManagerParams) => {
-  const [members, setMembers] = useState(initialMembers ?? []);
+  const [members, setMembers] = useState(
+    initialMembers ? formatInitialMembers(initialMembers) : []
+  );
 
   const addBulkMembers = (members: string) => {
     const newMembers = members.split(TOKEN_SEPARATOR).map((member) => member);
