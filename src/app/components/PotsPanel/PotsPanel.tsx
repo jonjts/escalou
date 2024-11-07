@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Button } from "@chakra-ui/react";
+
 import CollapsiblePanel from "../CollapsiblePanel";
 import { Pot } from "../Pot/Pot";
 
@@ -13,7 +14,10 @@ export const PotsPanel = () => {
         </Heading>
       }
     >
-      <div>
+      <div className="flex flex-col gap-2 ">
+        <Button className="bg-white text-black" size={"sm"} variant={"solid"}>
+          {t("addPot")}
+        </Button>
         <Pot name={"A"} onClose={() => {}} onMembersChange={() => {}} />
       </div>
     </CollapsiblePanel>

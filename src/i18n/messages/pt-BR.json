@@ -2,7 +2,8 @@
     "brand": "Escalou - Sorteio de Grupos",
     "PotsPanel":{
         "female":{
-            "title": "Potes"
+            "title": "Potes",
+            "addPot": "Adicionar Pote"
         }
     },
     "Pot":{

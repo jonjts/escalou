@@ -2,7 +2,8 @@
     "brand": "Escalou - Group Draw",
     "PotsPanel":{
         "female":{
-            "title": "Pots"
+            "title": "Pots",
+            "addPot": "Add Pot"
         }
     },
     "Pot":{
