@@ -1,14 +1,28 @@
+import { BaseModel } from "./BaseModel";
 import { Player } from "./Player";
 import { Pot } from "./Pot";
 import { Team } from "./Team";
 
-export class GroupDraw {
+export class GroupDraw extends BaseModel {
   private MAX_LETTERS = 26;
   private MAX_POTS = this.MAX_LETTERS * 2;
   private _pots: Map<string, Pot>;
 
+  static create() {
+    return new GroupDraw();
+  }
+
   constructor() {
+    super();
     this._pots = new Map<string, Pot>();
+    this.canAddPot = this.canAddPot.bind(this);
+    this.addPot = this.addPot.bind(this);
+    this.addPlayesToPot = this.addPlayesToPot.bind(this);
+    this.removePot = this.removePot.bind(this);
+  }
+
+  get pots() {
+    return Array.from(this._pots.values());
   }
 
   makeDraw(teamCount: number): Team[] {

@@ -2,7 +2,7 @@ import { Player } from "../Player";
 
 describe("Player", () => {
   it("create a player", () => {
-    const player = new Player("A");
+    const player = Player.create("A");
     expect(player.name).toBe("A");
     expect(player.score).toBe(0);
   });

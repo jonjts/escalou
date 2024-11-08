@@ -5,7 +5,7 @@ describe("GroupDraw", () => {
   let groupDraw: GroupDraw;
 
   beforeEach(() => {
-    groupDraw = new GroupDraw();
+    groupDraw = GroupDraw.create();
   });
 
   describe("addPot", () => {

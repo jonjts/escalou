@@ -4,12 +4,20 @@ import { NextIntlClientProvider } from "next-intl";
 import enMessages from "@/i18n/messages/en.json";
 import { ThemeProvider } from "../contexts/ThemeContext";
 
-export const renderWithProviders = (children: React.ReactNode) => {
+interface Options {
+  wrapper?: React.JSXElementConstructor<{ children: React.ReactNode }>;
+}
+
+export const renderWithProviders = (
+  children: React.ReactNode,
+  options: Options
+) => {
   return render(
     <ThemeProvider>
       <NextIntlClientProvider messages={enMessages} locale="en">
         {children}
       </NextIntlClientProvider>
-    </ThemeProvider>
+    </ThemeProvider>,
+    options
   );
 };
