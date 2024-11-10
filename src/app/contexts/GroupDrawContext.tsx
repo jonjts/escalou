@@ -10,6 +10,8 @@ interface GroupDrawContextData {
   addPlayersToPot(potName: string, players: Player[]): void;
   deletePot(potName: string): void;
   pots: Pot[];
+  setTeamCount(teamCount: number): void;
+  teamCount: number;
 }
 
 interface GroupDrawProviderProps {
@@ -27,10 +29,15 @@ const GroupDrawContext = createContext<GroupDrawContextData>({
     throw new Error("GroupDrawContext not initialized");
   },
   pots: [],
+  teamCount: 0,
+  setTeamCount: () => {
+    throw new Error("GroupDrawContext not initialized");
+  },
 });
 
 export const GroupDrawProvider = ({ children }: GroupDrawProviderProps) => {
   const [groupDraw] = useState(GroupDraw.create());
+  const [teamCount, setTeamCount] = useState(1);
   const [pots, setPots] = useState(groupDraw.pots);
 
   const addNewPot = () => {
@@ -55,6 +62,8 @@ export const GroupDrawProvider = ({ children }: GroupDrawProviderProps) => {
         addPlayersToPot,
         deletePot,
         pots,
+        setTeamCount,
+        teamCount,
       }}
     >
       {children}

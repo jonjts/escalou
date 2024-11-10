@@ -10,5 +10,12 @@
         "female":{
             "textAreaPlaceholder": "Adicione as jogadores separadas por vírgula"
         }
+    },
+    "GroupRules":{
+        "female":{
+            "title": "Definir regras",
+            "teamCount": "Quantidade de times",
+            "teamCountPlaceholder": "Informe a quantidade de times"
+        }
     }
 }

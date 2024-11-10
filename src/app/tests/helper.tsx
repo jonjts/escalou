@@ -10,7 +10,7 @@ interface Options {
 
 export const renderWithProviders = (
   children: React.ReactNode,
-  options: Options
+  options?: Options
 ) => {
   return render(
     <ThemeProvider>

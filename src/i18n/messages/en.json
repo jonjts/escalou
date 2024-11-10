@@ -10,5 +10,12 @@
         "female":{
             "textAreaPlaceholder": "Add players separated by comma"
         }
+    },
+    "GroupRules":{
+        "female":{
+            "title": "Define rules",
+            "teamCount": "Team count",
+            "teamCountPlaceholder": "Inform the team count"
+        }
     }
 }
